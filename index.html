@@ -10,41 +10,39 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- Bootstrap link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <style>
+.hero-canvas-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+.hero .text-center, .hero .btn-primary {
+  position: relative;
+  z-index: 2;
+}
+  </style>
   </head>
   <body>
+  <canvas id="aurora-bg"></canvas>
+  <!-- Aurora background canvas for animated gradient blobs -->
+
     <!-- Header & Navbar -->
     <header class="bg-dark fixed-top">
-      <nav class="container-xxl navbar navbar-expand-lg py-3 bg-dark navbar-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand fw-bold fs-3" href="#">Samadrita Mondal</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-xxl">
+          <a class="navbar-brand fw-bold" href="#">Samadrita Mondal</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="#abt">ABOUT</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="#about">EDUCATION</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="#exp">EXPERIENCE</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="#skills">POR</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="#skillsss">SKILLS</a>
-              </li>
-              
-             
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="#certifications">CERTIFICATIONS & OTHERS</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="#contact">CONTACT</a>
-              </li>
+              <li class="nav-item"><a class="nav-link" href="#abt">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#about">Education</a></li>
+              <li class="nav-item"><a class="nav-link" href="#skillsss">Skills</a></li>
+              <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+              <li class="nav-item"><a class="nav-link" href="#certifications">Achievements</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -58,6 +56,7 @@
         <h2 class="display-3 text-white fw-bold">BTech CSE'27 undergrad <br />at IITG</h2>
         <a href="#abt" class="btn btn-lg fs-6 fw-medium mt-5 btn-primary p-3">MORE ABOUT ME</a>
       </div>
+      <canvas id="network-bg" class="hero-canvas-bg"></canvas>
     </section>
 
 
@@ -71,7 +70,7 @@
         </div>
         <div class="row d-flex justify-content-center">
           <div class="col-lg-6 col-md-8"><p>Hello ! I am Samadrita, <b>BTech CSE'27 Undergrad at IIITG</b>. Driven by a deep curiosity for the ever-evolving world of technology, I am passionate about exploring various domains within computer science. Currently, I am focused on machine learning and enjoy problem solving, data structures and algorithms. As I continue to refine my skills, I am eager to discover where my strengths and interests intersect. Open to learning from diverse perspectives, I am eager to connect , learn and contribute my part to the tech revolution.</p>
-            <p><i>I’ve loved painting for a long long time, and I often find joy in revisiting my ‘painter era' - filled with canvases, colors, and all sorts of craftwork. I also enjoy dancing and singing, and I’m always eager to try out new hobbies, whether it’s pottery or something entirely different. </i></p>
+            <p><i>I love painting since a long long time, and I often find joy in revisiting my ‘painter era' - filled with canvases, colors, and all sorts of craftwork. I also enjoy dancing and singing, and I’m always eager to try out new hobbies, whether it’s pottery or something entirely different. </i></p>
           </div>
         </div>
       </section>
@@ -127,171 +126,155 @@
 </section>
 
 <!-- Skills Section -->
-<section class="container py-5" id="exp">
-    <div class="row mt-4 py-3">
-      <div class="col-12 d-flex flex-column text-center justify-content-center">
-        <h2>EXPERIENCE</h2>
-        <h5 class="text-secondary fw-normal py-2 fst-italic">Gaining some hands-on experience while I keep learning...</h5>
-      </div>
-    </div>
-  
-    <div class="row d-flex justify-content-center mx-0 mt-5">
-
-  
-      <!-- Research Intern -->
-      <div class="col-md-4 mb-4">
-        <div class="card p-4 text-center bg-primary text-white rounded" style="height: 350px;">
-          <i class="fas fa-book fa-3x mb-3"></i>
-          <h3>Research Intern</h3>
-          <p class="text-center">June 2025–Present</p>
-          <h5>International Institute Of Information Technology, Hyderabad</h5>
-          <p>Working to build AI-driven solutions to real world problem with HCI.</p>
-          
-        </div>
-      </div>
-  
-    </div>
-  </section>
-  
-  
-
-   <!-- Position of Responsibility Section -->
-<section class="container py-5" id="skills">
-    <div class="row mt-4 py-3">
-      <div class="col-12 d-flex flex-column text-center justify-content-center">
-        <h2>POSITIONS OF RESPONSIBILITY</h2>
-        <h5 class="text-secondary fw-normal py-2 fst-italic">Leading initiatives and driving engagement in various clubs and events...</h5>
-      </div>
-    </div>
-    <div class="row d-flex justify-content-between mx-0">
-      <div class="card mt-5 d-flex flex-column align-items-center text-center bg-white p-4" style="width: 25rem">
-        <i class="text-white bg-primary d-flex align-items-center justify-content-center fs-2 rounded-circle fa-solid fa-calendar-day"></i>
-        <h3 class="mt-4 h4">Fine Arts Club Coordinator</h3>
-        <h5 class="text-secondary">I & E-Cell, Entropy & Yuvaan (Annual Technical and Cultural Fest), IIIT G</h5>
-        <p class="text-center">Jan 2025–Present</p>
-        <ul>
-          <li>Besides overseeing club activities, I channnelised my love for art through two flagship events.</li>
-          <li>The Art Odyssey: A creative multi-level art contest with surprise twists like- no brush painting, use of only one colour for the given time, held during the fest, Yuvaan.</li>
-          <li>Sip & Paint: A chill, rule-free painting session with music, food, and good vibes.</li>
-        </ul>
-      </div>
-      <div class="card mt-5 d-flex flex-column align-items-center text-center bg-white p-4" style="width: 25rem">
-        <i class="text-white bg-primary d-flex align-items-center justify-content-center fs-2 rounded-circle fa-solid fa-users"></i>
-        <h3 class="mt-4 h4">Mavericks Society Coordinator</h3>
-        <h5 class="text-secondary">Machine Learning Club, IIIT G</h5>
-        <p class="text-center">Aug 2024–Dec 2024</p>
-        <ul>
-          <li>Lead initiatives to promote learning and engagement in machine learning by organizing interactive ML sessions.</li>
-          <li>Developed an online portal to centralize essential ML resources and conducted hands-on bootcamps.</li>
-          <li>Introduced a bootcamp project on a neural network-based handwritten digit recognition system, providing participants with practical experience in building and training models.</li>
-        </ul>
-      </div>
-      <div class="card mt-5 d-flex flex-column align-items-center text-center bg-white p-4" style="width: 25rem">
-        <i class="text-white bg-primary d-flex align-items-center justify-content-center fs-2 rounded-circle fa-solid fa-robot"></i>
-        <h3 class="mt-4 h4">Technocrats Core Team</h3>
-        <h5 class="text-secondary">Robotics Club, IIIT G</h5>
-        <p class="text-center">May 2024–Dec 2024</p>
-        <ul>
-          <li>Organized robotics events, such as Fastrack, a track-based robo race where teams built RC robots from scratch to compete on a custom track.</li>
-        </ul>
-      </div>
-      <div class="d-flex justify-content-center">
-  <div class="card mt-5 d-flex flex-column align-items-center text-center bg-white p-4" style="width: 25rem">
-        <i class="text-white bg-primary d-flex align-items-center justify-content-center fs-2 rounded-circle fa-solid fa-calendar-day"></i>
-        <h3 class="mt-4 h4">Event Management Core Team</h3>
-        <h5 class="text-secondary">I & E-Cell, Entropy & Yuvaan (Annual Technical and Cultural Fest), IIIT G</h5>
-        <p class="text-center">Jan 2024–Present</p>
-        <ul>
-          <li>Organized events including Greedy Rumble, a multi-round entrepreneurship competition with business-focused challenges.</li>
-          <li>Hosted a Tech Quiz with various themed rounds, among other technical and entrepreneurial events in the fest.</li>
-        </ul>
-      </div>
-      
-</div>
-    </div>
-  </section>
-
-<!-- Skills Section -->
 <section class="container py-5" id="skillsss">
-    <div class="row mt-4 py-3">
-      <div class="col-12 d-flex flex-column text-center justify-content-center">
-        <h2>SKILLS</h2>
-        <h5 class="text-secondary fw-normal py-2 fst-italic">Continuously evolving my skill set...</h5>
+  <div class="row mt-4 py-3">
+    <div class="col-12 d-flex flex-column text-center justify-content-center">
+      <h2>SKILLS</h2>
+      <h5 class="text-secondary fw-normal py-2 fst-italic">Continuously evolving my skill set...</h5>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center mx-0 mt-5">
+    <div class="col-md-8 mb-4">
+      <div class="skills-timeline">
+        <div class="skill-item">
+          <div class="skill-icon"><i class="fas fa-code"></i></div>
+          <div class="skill-content">
+            <h4>Technical Skills and Interests</h4>
+            <div class="skill-list"><strong>Programming Languages:</strong> C++, Python, Java, C</div>
+            <div class="skill-list"><strong>AI & ML:</strong> Numpy, Pandas, Scikit-Learn, Matplotlib, Seaborn, Classification, Regression, RAG, LLMs, RestAPI, Regex, Generative AI</div>
+            <div class="skill-list"><strong>Developer Tools:</strong> Git, GitHub, Jupyter, VSCode, Eclipse, IntelliJ</div>
+            <div class="skill-list"><strong>Cloud/Databases:</strong> MySQL</div>
+            <div class="skill-list"><strong>Operating Systems:</strong> Linux, Windows</div>
+            <div class="skill-list"><strong>Web Development:</strong> HTML, CSS, JavaScript</div>
+            <div class="skill-list"><strong>Other skills:</strong> DSA, Problem solving, Data Analysis, User-Centric Design, User Experience</div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><i class="fas fa-users"></i></div>
+          <div class="skill-content">
+            <h4>Soft Skills</h4>
+            <div class="skill-list">Public Speaking, Team Management, Event Management, Fast Adaptation</div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="skill-content">
+            <h4>Coursework</h4>
+            <div class="skill-list">Data Structures, Algorithms, Artificial Intelligence, Database Management Systems, Operating Systems, Computer Organisation & Architecture, Discrete Mathematics, Optimization Techniques, Probability & Statistics</div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+</section>
   
-    <div class="row d-flex justify-content-between mx-0 mt-5">
   
-      <!-- Technical Skills Card -->
-      <div class="col-md-4 mb-4">
-        <div class="card p-4 text-center bg-primary text-white rounded" style="height: 350px;">
-          <i class="fas fa-code fa-3x mb-3"></i>
-          <h4>Technical Skills</h4>
-          
-          <ul class="list-unstyled">
-            <li><strong>Programming Languages:</strong> C++ | Java | Python | C</li>
-            <li><strong>Web Development:</strong> HTML | CSS | JavaScript</li>
-            <!-- <li><strong>Frameworks:</strong> React | Node.js | Flask</li> -->
-            <li><strong>Libraries:</strong> Pandas | NumPy | Matplotlib | Seaborn</li>
-            <li><strong>Databases:</strong> MySQL</li>
-            <li><strong>Developer Tools:</strong> Git, GitHub, Jupyter Notebook, Visual Studio Code, Eclipse, IntelliJ</li>
-            <li><strong>Operating Systems:</strong> Linux, Windows</li>
-
-          </ul>
-        </div>
-      </div>
-  
-      <!-- Relevant Coursework Card -->
-      <div class="col-md-4 mb-4">
-        <div class="card p-4 text-center bg-primary text-white rounded" style="height: 350px;">
-          <i class="fas fa-book fa-3x mb-3"></i>
-          <h4>Relevant Coursework</h4>
-          
-          <ul class="list-unstyled">
-            <li>Data Structures | Algorithms | IT Workshop |Artificial Intelligence | Database Management Systems | Operating Systems | Computer Organisation & Architecture | Probability & Statistics
-            Discrete Mathematics | Optimization Techniques </li>
-          </ul>
-        </div>
-      </div>
-  
-      <!-- Soft Skills Card -->
-      <div class="col-md-4 mb-4">
-        <div class="card p-4 text-center bg-primary text-white rounded" style="height: 350px;">
-          <i class="fas fa-users fa-3x mb-3"></i>
-          <h4>Soft Skills</h4>
-          <ul class="list-unstyled">
-            <li>Time Management | Leadership | Teamwork</li>
-            <li>Adaptability | Communication | Event Management</li>
-          </ul>
-        </div>
-      </div>
-  
+<!-- Projects Section -->
+<section class="container py-5" id="projects">
+  <div class="row mt-4 py-3">
+    <div class="col-12 d-flex flex-column text-center justify-content-center">
+      <h2>PROJECTS</h2>
+      <h5 class="text-secondary fw-normal py-2 fst-italic">A few things I've built or am building...</h5>
     </div>
-  </section>
-  
-  
-
-
- <!-- Certifications & Others Section -->
-<section class="container py-5" id="certifications">
-    <div class="row mt-4 py-3">
-        <div class="col-12 d-flex flex-column text-center">
-            <h2>Certifications & Others</h2>
-            <h5 class="text-secondary fw-normal py-2 fst-italic">Extra courses I did and other details...</h5>
-        </div>
+  </div>
+  <div class="row d-flex justify-content-center mx-0 mt-5">
+    <div class="col-md-8 mb-4">
+      <div class="card p-4 mb-4">
+        <h4>AI enabled Agro Advisor <span class="badge bg-success">Ongoing</span></h4>
+        <p>Developing an AI-powered advisory system to interpret farmer queries and deliver accurate, data-driven predictions and recommendations with high response relevance, increasing about 55% of crop yield.</p>
+        <p><strong>Skills and Tools Used:</strong> LLMs (Google Gemini, Deepseek), RESTfulAPI layer, ML Classifiers, Regression, Regex, Generative AI, RAG, Python, Pandas, Scikit-learn, data ingestion (179K+ records), UX, HCI</p>
+        <a href="https://github.com/SamadritaM30/Agro_Advisor" target="_blank" class="btn btn-view">View Project</a>
+      </div>
+      <div class="card p-4 mb-4">
+        <h4>Medical Aid Tracker</h4>
+        <p>A one-stop solution for booking real-time medical assistance across 50+ hospitals in your city, including scheduling doctor appointments, finding bed availability, searching specialists, locating and accessing nearby ambulance services.</p>
+        <p><strong>Skills and Tools Used:</strong> DBMS, MYSQL, Java, JDBC, ER-diagram</p>
+        <a href="https://github.com/SamadritaM30/Medical_Aid_Tracker" target="_blank" class="btn btn-view">View Project</a>
+      </div>
+      <div class="card p-4 mb-4">
+        <h4>Lunar Lander Agent</h4>
+        <p>Optimized PyTorch-based AI agent for OpenAI Gym’s LunarLander-v3 using Particle Swarm Optimization to tune a neural network policy, achieving an average best score of 284.75.</p>
+        <p><strong>Skills and Tools Used:</strong> PSO Algorithm (AI), Neural Network, PyTorch, Python</p>
+        <a href="https://github.com/SamadritaM30/Lunar_Lander" target="_blank" class="btn btn-view">View Project</a>
+      </div>
+      <div class="card p-4 mb-4">
+        <h4>Chess Game</h4>
+        <p>This project is a graphical chess engine built using Pygame and the python-chess library. The game allows a human player to play against an AI that uses the alpha-beta pruning algorithm along with a heuristic evaluation function for decision-making.</p>
+        <a href="https://github.com/SamadritaM30/Chess_Game" target="_blank" class="btn btn-view">View Project</a>
+      </div>
+      <div class="card p-4 mb-4">
+        <h4>Tic Tac Toe</h4>
+        <p>A terminal-based Tic-Tac-Toe game where you play against an unbeatable AI using the Minimax algorithm. Features a 3×3 grid, simple input, win/draw detection, and smart AI moves. Perfect for learning basic Python and game AI.</p>
+        <a href="https://github.com/SamadritaM30/Tic-Tac-Toe" target="_blank" class="btn btn-view">View Project</a>
+      </div>
+      <div class="card p-4 mb-4">
+        <h4>Heart Disease Prediction</h4>
+        <p>Heart Disease Prediction Machine Learning Model predicts whether a person has a healthy heart or has a heart disease using Logistic Regression Model. It involves data pre-processing, feature selection, data splitting, model training and model evaluation. The goal is to create a reliable tool for early diagnosis and preventive healthcare.</p>
+        <a href="https://github.com/SamadritaM30/Heart-Disease-Prediction" target="_blank" class="btn btn-view">View Project</a>
+      </div>
+      <div class="card p-4 mb-4">
+        <h4>Car Price Prediction</h4>
+        <p>The Car Price Prediction Machine Learning Model predicts the selling price of cars using Linear Regression and Lasso Regression models. It involves data pre-processing, feature selection, data splitting, model training, and model evaluation. The goal is to create a reliable tool for predicting car prices to aid in market analysis & decision-making.</p>
+        <a href="https://github.com/SamadritaM30/Car-Price-Prediction" target="_blank" class="btn btn-view">View Project</a>
+      </div>
     </div>
-    <div class="row d-flex justify-content-center">
-        <div class="col-lg-6 col-md-8">
-            <ul>
-                <li>Completed the Machine Learning Specialization by Andrew Ng (Stanford Online and DeepLearning.AI)</li>
-                <li>Completed the Foundations of AR Specialization by Meta</li>
-                <li>Languages: English (Full Professional Proficiency), Hindi, Bengali</li>
-            </ul>
-        </div>
-    </div>
+  </div>
 </section>
 
-
+<!-- Achievements & Certificates Section -->
+<section class="container py-5" id="certifications">
+  <div class="row mt-4 py-3">
+    <div class="col-12 d-flex flex-column text-center">
+      <h2>Achievements & Certificates</h2>
+      <h5 class="text-secondary fw-normal py-2 fst-italic">Recognitions, awards, and completed certifications</h5>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-lg-8 col-md-10">
+      <div class="achievements-timeline">
+        <div class="achievement-item">
+          <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+          <div class="achievement-content">
+            Selected as <strong>top 500 cohorts in Flipkart</strong> Runway Season 5
+            <a href="https://drive.google.com/file/d/1Z8XduTOOUsBGBSC5Xz_IVt-euqhp0Cuc/view?usp=sharing" target="_blank"><em>certificate</em></a>,
+            <a href="https://drive.google.com/file/d/17_lnvfbOk3PtkGImqBy1r1air6gJjzpk/view?usp=sharing" target="_blank"><em>qualified for round2</em></a>,
+            <a href="https://drive.google.com/file/d/1bRyoKtFXdys718ZLM2mamWdHHBDlqNJb/view?usp=sharing" target="_blank"><em>result</em></a>
+          </div>
+        </div>
+        <div class="achievement-item">
+          <div class="achievement-icon"><i class="fas fa-user-graduate"></i></div>
+          <div class="achievement-content">
+            Selected as a Mentee in Codess.Cafe among 2500+ applicants. <a href="https://drive.google.com/file/d/17Hm1b4G7c2iLtbW_psTesKmL0tA7FLaU/view?usp=sharing" target="_blank"><em>acceptance letter</em></a>
+          </div>
+        </div>
+        <div class="achievement-item">
+          <div class="achievement-icon"><i class="fas fa-hands-helping"></i></div>
+          <div class="achievement-content">
+            Mentoring prospective students as they navigate pre-college uncertainties and make informed decisions at <a href="https://www.precollege.in/mentor/samadritas" target="_blank"><em>PreCollege</em></a>
+          </div>
+        </div>
+        <div class="achievement-item">
+          <div class="achievement-icon"><i class="fas fa-certificate"></i></div>
+          <div class="achievement-content">
+            Completed the <em>Machine Learning Specialization</em> by Andrew Ng (Stanford Online and DeepLearning.AI) <a href="https://drive.google.com/file/d/1Tv69SSl94mKmFdXGFb1O9umSWMeRjNpL/view?usp=sharing" target="_blank"><em>certificate</em></a>
+          </div>
+        </div>
+        <div class="achievement-item">
+          <div class="achievement-icon"><i class="fas fa-vr-cardboard"></i></div>
+          <div class="achievement-content">
+            Wrapped up the <em>Foundations of AR Specialization</em> course by Meta <a href="https://drive.google.com/file/d/143oS6QZ5B4N6KUvom15FGaHYFZWjkTcC/view?usp=sharing" target="_blank"><em>certificate</em></a>
+          </div>
+        </div>
+        <div class="achievement-item">
+          <div class="achievement-icon"><i class="fas fa-star"></i></div>
+          <div class="achievement-content">
+            Earned the <em>Google's User Experience (UX) Design</em> course
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Contact Section -->
 <section class="py-5" id="contact">
@@ -302,10 +285,10 @@
       <div class="row pt-4 mt-5">
         <div class="col-12 text-center text-white">
           <div class="contact-box">
-            <p><i class="fa fa-phone"></i> <a href="tel:+917001805007" class="text-white">+91 7001805007</a></p>
+            <p><i class="fa fa-phone"></i> <a href="tel:+919748042745" class="text-white">+91 9748042745</a></p>
           </div>
           <div class="contact-box">
-            <p><i class="fa fa-envelope"></i> <a href="mailto:samadritamondal777@gmail.com" class="text-white">samadritamondal777@gmail.com</a></p>
+            <p><i class="fa fa-envelope"></i> <a href="mailto:samadrita5mondal@gmail.com" class="text-white">samadrita5mondal@gmail.com</a></p>
           </div>
           <div class="contact-box">
             <p><i class="fa fa-envelope"></i> <a href="mailto:samadrita.mondal23b@iiitg.ac.in" class="text-white">samadrita.mondal23b@iiitg.ac.in</a></p>
@@ -347,5 +330,310 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gyb1joZjA1n6gDkiIH1ms6RfX5J7Rqcz+gjfM1nXY8V5cbJjH8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0v8Fq7pP4TYh8vwDct5XtovfjpLg5h1o7QWpQTw2+QUg5EAA" crossorigin="anonymous"></script>
+    <script>
+// Section fade-in on scroll
+window.addEventListener('DOMContentLoaded', function() {
+  const sections = document.querySelectorAll('section');
+  const revealSection = () => {
+    const triggerBottom = window.innerHeight * 0.92;
+    sections.forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top;
+      if(sectionTop < triggerBottom) {
+        section.classList.add('visible');
+      }
+    });
+  };
+  window.addEventListener('scroll', revealSection);
+  revealSection();
+
+  // --- Animated Network Background for Hero ---
+  const canvas = document.getElementById('network-bg');
+  if(canvas) {
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let points = [];
+    const POINTS = 32;
+    const SPEED = 0.5;
+    function resize() {
+      width = canvas.width = document.querySelector('.hero').offsetWidth;
+      height = canvas.height = document.querySelector('.hero').offsetHeight;
+    }
+    function random(min, max) { return Math.random() * (max - min) + min; }
+    function createPoints() {
+      points = [];
+      for(let i=0; i<POINTS; i++) {
+        points.push({
+          x: random(0, width),
+          y: random(0, height),
+          vx: random(-SPEED, SPEED),
+          vy: random(-SPEED, SPEED)
+        });
+      }
+    }
+    function draw() {
+      ctx.clearRect(0,0,width,height);
+      // Draw lines
+      for(let i=0; i<POINTS; i++) {
+        for(let j=i+1; j<POINTS; j++) {
+          const dx = points[i].x - points[j].x;
+          const dy = points[i].y - points[j].y;
+          const dist = Math.sqrt(dx*dx + dy*dy);
+          if(dist < 140) {
+            ctx.strokeStyle = `rgba(0,198,255,${1-dist/140})`;
+            ctx.lineWidth = 1.2;
+            ctx.beginPath();
+            ctx.moveTo(points[i].x, points[i].y);
+            ctx.lineTo(points[j].x, points[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+      // Draw points
+      for(let i=0; i<POINTS; i++) {
+        ctx.beginPath();
+        ctx.arc(points[i].x, points[i].y, 2.7, 0, 2*Math.PI);
+        ctx.fillStyle = '#00c6ff';
+        ctx.shadowColor = '#00c6ff';
+        ctx.shadowBlur = 8;
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      }
+    }
+    function update() {
+      for(let i=0; i<POINTS; i++) {
+        points[i].x += points[i].vx;
+        points[i].y += points[i].vy;
+        if(points[i].x < 0 || points[i].x > width) points[i].vx *= -1;
+        if(points[i].y < 0 || points[i].y > height) points[i].vy *= -1;
+      }
+    }
+    function animate() {
+      update();
+      draw();
+      requestAnimationFrame(animate);
+    }
+    resize();
+    createPoints();
+    animate();
+    window.addEventListener('resize', () => {
+      resize();
+      createPoints();
+    });
+  }
+});
+
+// Aurora Animated Gradient Background
+(function() {
+  const canvas = document.getElementById('aurora-bg');
+  if (!canvas) return;
+  let ctx = canvas.getContext('2d');
+  let width = window.innerWidth;
+  let height = window.innerHeight;
+  let dpr = window.devicePixelRatio || 1;
+  let auroras = [];
+  const COLORS = [
+    ['#7fbcff', '#b8ffec', '#a7a6ff'], // blue-green
+    ['#ffb8e2', '#ffe7b8', '#b8ffd9'], // pink-yellow-green
+    ['#b8e0ff', '#b8fff6', '#e2b8ff'], // blue-cyan-purple
+    ['#b8ffd9', '#b8e2ff', '#ffe7b8']  // green-blue-yellow
+  ];
+  function resize() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.scale(dpr, dpr);
+  }
+  function randomAurora() {
+    const colorSet = COLORS[Math.floor(Math.random() * COLORS.length)];
+    return {
+      x: Math.random() * width,
+      y: Math.random() * height,
+      r: 180 + Math.random() * 220,
+      dx: (Math.random() - 0.5) * 0.2,
+      dy: (Math.random() - 0.5) * 0.2,
+      phase: Math.random() * Math.PI * 2,
+      speed: 0.0007 + Math.random() * 0.0008,
+      colorSet,
+      alpha: 0.18 + Math.random() * 0.13
+    };
+  }
+  function createAuroras() {
+    auroras = [];
+    const count = Math.max(3, Math.floor(width / 600));
+    for (let i = 0; i < count; i++) {
+      auroras.push(randomAurora());
+    }
+  }
+  function drawAurora(a, t) {
+    ctx.save();
+    ctx.globalAlpha = a.alpha;
+    const grad = ctx.createRadialGradient(
+      a.x + Math.sin(t * a.speed + a.phase) * 60,
+      a.y + Math.cos(t * a.speed + a.phase) * 60,
+      a.r * 0.2,
+      a.x,
+      a.y,
+      a.r
+    );
+    grad.addColorStop(0, a.colorSet[0]);
+    grad.addColorStop(0.5, a.colorSet[1]);
+    grad.addColorStop(1, a.colorSet[2]);
+    ctx.beginPath();
+    ctx.arc(a.x, a.y, a.r, 0, 2 * Math.PI);
+    ctx.fillStyle = grad;
+    ctx.filter = 'blur(32px)';
+    ctx.fill();
+    ctx.filter = 'none';
+    ctx.restore();
+  }
+  function animateAurora() {
+    ctx.clearRect(0, 0, width, height);
+    const t = performance.now();
+    for (let a of auroras) {
+      // Animate position with slow drifting
+      a.x += a.dx + Math.sin(t * a.speed + a.phase) * 0.08;
+      a.y += a.dy + Math.cos(t * a.speed + a.phase) * 0.08;
+      // Wrap around edges
+      if (a.x < -a.r) a.x = width + a.r;
+      if (a.x > width + a.r) a.x = -a.r;
+      if (a.y < -a.r) a.y = height + a.r;
+      if (a.y > height + a.r) a.y = -a.r;
+      drawAurora(a, t);
+    }
+    requestAnimationFrame(animateAurora);
+  }
+  resize();
+  createAuroras();
+  animateAurora();
+  window.addEventListener('resize', () => {
+    resize();
+    createAuroras();
+  });
+})();
+
+// Aurora Animated Gradient Background - Enhanced & Vibrant
+(function() {
+  const canvas = document.getElementById('aurora-bg');
+  if (!canvas) return;
+  let ctx = canvas.getContext('2d');
+  let width = window.innerWidth;
+  let height = window.innerHeight;
+  let dpr = window.devicePixelRatio || 1;
+  let auroras = [];
+  // Vibrant, neon-inspired color sets
+  const COLORS = [
+    ['#00ffea', '#00c6ff', '#7fbcff'], // neon cyan-blue
+    ['#b967ff', '#6a82fb', '#00ffea'], // purple-blue-cyan
+    ['#39ff14', '#00ffea', '#00c6ff'], // neon green-cyan
+    ['#ff61a6', '#fffb00', '#00ffea'], // pink-yellow-cyan
+    ['#00ffea', '#39ff14', '#b8ffec'], // cyan-green
+    ['#6a82fb', '#b967ff', '#ff61a6'], // blue-purple-pink
+    ['#00ffea', '#00fffb', '#ffffff']  // cyan-white
+  ];
+  function resize() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.scale(dpr, dpr);
+  }
+  function randomAurora() {
+    const colorSet = COLORS[Math.floor(Math.random() * COLORS.length)];
+    return {
+      x: Math.random() * width,
+      y: Math.random() * height,
+      r: 260 + Math.random() * 320,
+      dx: (Math.random() - 0.5) * 0.25,
+      dy: (Math.random() - 0.5) * 0.25,
+      phase: Math.random() * Math.PI * 2,
+      speed: 0.0008 + Math.random() * 0.0012,
+      colorSet,
+      alpha: 0.22 + Math.random() * 0.18
+    };
+  }
+  function createAuroras() {
+    auroras = [];
+    const count = Math.max(6, Math.floor(width / 320));
+    for (let i = 0; i < count; i++) {
+      auroras.push(randomAurora());
+    }
+  }
+  function drawAurora(a, t) {
+    ctx.save();
+    ctx.globalAlpha = a.alpha;
+    const grad = ctx.createRadialGradient(
+      a.x + Math.sin(t * a.speed + a.phase) * 90,
+      a.y + Math.cos(t * a.speed + a.phase) * 90,
+      a.r * 0.18,
+      a.x,
+      a.y,
+      a.r
+    );
+    grad.addColorStop(0, a.colorSet[0]);
+    grad.addColorStop(0.45, a.colorSet[1]);
+    grad.addColorStop(1, a.colorSet[2]);
+    ctx.beginPath();
+    ctx.arc(a.x, a.y, a.r, 0, 2 * Math.PI);
+    ctx.fillStyle = grad;
+    ctx.filter = 'blur(48px)';
+    ctx.fill();
+    ctx.filter = 'none';
+    ctx.restore();
+  }
+  // Animated wavy streaks for extra depth
+  function drawWaves(t) {
+    ctx.save();
+    ctx.globalAlpha = 0.22;
+    for (let i = 0; i < 3; i++) {
+      const baseY = height * (0.25 + 0.25 * i) + Math.sin(t/1200 + i) * 40;
+      ctx.beginPath();
+      for (let x = 0; x <= width; x += 2) {
+        const y = baseY + Math.sin(x/180 + t/1800 + i*2) * 32 + Math.cos(x/90 + t/2200 + i) * 18;
+        if (x === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      const grad = ctx.createLinearGradient(0, baseY-40, width, baseY+40);
+      grad.addColorStop(0, COLORS[i][0]);
+      grad.addColorStop(0.5, COLORS[i][1]);
+      grad.addColorStop(1, COLORS[i][2]);
+      ctx.strokeStyle = grad;
+      ctx.lineWidth = 44;
+      ctx.shadowColor = COLORS[i][1];
+      ctx.shadowBlur = 32;
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
+  function animateAurora() {
+    ctx.clearRect(0, 0, width, height);
+    const t = performance.now();
+    for (let a of auroras) {
+      a.x += a.dx + Math.sin(t * a.speed + a.phase) * 0.12;
+      a.y += a.dy + Math.cos(t * a.speed + a.phase) * 0.12;
+      if (a.x < -a.r) a.x = width + a.r;
+      if (a.x > width + a.r) a.x = -a.r;
+      if (a.y < -a.r) a.y = height + a.r;
+      if (a.y > height + a.r) a.y = -a.r;
+      drawAurora(a, t);
+    }
+    drawWaves(t);
+    requestAnimationFrame(animateAurora);
+  }
+  resize();
+  createAuroras();
+  animateAurora();
+  window.addEventListener('resize', () => {
+    resize();
+    createAuroras();
+  });
+})();
+</script>
   </body>
 </html>
