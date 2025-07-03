@@ -221,6 +221,18 @@ footer .social-icons a {
   padding-top: 5rem;
   padding-bottom: 5rem;
   background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+#contact-animated-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.7;
+  filter: blur(8px) brightness(1.1);
+  transition: opacity 0.4s;
 }
 
 #contact .container-xxl {
@@ -286,36 +298,6 @@ footer .social-icons a {
   letter-spacing: 2px;
 }
 
-@media screen and (max-width: 990px) {
-  #contact .col-lg-6 {
-    width: 100%;
-  }
-
-  #contact .col-12 {
-    padding: 0 20px;
-  }
-}
-
-@media screen and (max-width: 668px) {
-  #contact .col-12 {
-    padding: 0 10px;
-  }
-  
-  #contact .form-floating input,
-  #contact .form-floating textarea {
-    width: 100% !important;
-  }
-
-  #contact form button {
-    width: 100%;
-    padding: 12px;
-  }
-
-  #contact p {
-    font-size: 1rem;
-  }
-
-}
 .contact-box {
   background-color: rgba(0, 0, 0, 0.5); /* Black with low transparency */
   padding: 8px 12px; /* Adjust padding to fit content */
@@ -779,6 +761,143 @@ body {
   #aurora-bg {
     opacity: 0.7;
   }
+}
+
+/* --- Quick Nav Floating Button & Overlay --- */
+#quick-nav-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 1002;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00c6ff 60%, #0056b3 100%);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 24px rgba(0,198,255,0.18);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+#quick-nav-btn:hover {
+  background: linear-gradient(135deg, #0056b3 60%, #00c6ff 100%);
+  box-shadow: 0 8px 32px rgba(0,198,255,0.28);
+  transform: scale(1.08);
+}
+#quick-nav-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1001;
+  background: rgba(10,20,40,0.92);
+  backdrop-filter: blur(8px) saturate(1.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s cubic-bezier(0.23,1,0.32,1);
+}
+#quick-nav-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+#quick-nav-overlay nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+#quick-nav-overlay nav ul li {
+  margin: 1.5em 0;
+}
+#quick-nav-overlay nav ul li a {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(90deg, #00c6ff 60%, #39ff14 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: color 0.2s, text-shadow 0.2s;
+  text-shadow: 0 2px 24px #00c6ff44;
+}
+#quick-nav-overlay nav ul li a:hover {
+  color: #00c6ff;
+  text-shadow: 0 4px 32px #00c6ff99;
+  -webkit-text-fill-color: #00c6ff;
+}
+#quick-nav-close {
+  position: absolute;
+  top: 32px;
+  right: 38px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.2rem;
+  cursor: pointer;
+  z-index: 1003;
+  transition: color 0.2s, transform 0.2s;
+}
+#quick-nav-close:hover {
+  color: #00c6ff;
+  transform: scale(1.15);
+}
+@media (min-width: 992px) {
+  #quick-nav-btn { display: none; }
+}
+@media (max-width: 991px) {
+  header.d-none.d-lg-block { display: none !important; }
+}
+
+/* --- Contact Section Animations & Effects --- */
+#contact {
+  position: relative;
+  overflow: hidden;
+}
+#contact-animated-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.7;
+  filter: blur(8px) brightness(1.1);
+  transition: opacity 0.4s;
+}
+#contact .container-xxl, #contact .row, #contact .col-12, #contact .contact-box {
+  position: relative;
+  z-index: 1;
+}
+#contact .contact-box {
+  animation: contactFadeIn 1.2s cubic-bezier(0.23,1,0.32,1);
+  transition: box-shadow 0.3s, background 0.3s, transform 0.3s;
+}
+#contact .contact-box:hover {
+  background: rgba(0,198,255,0.18);
+  box-shadow: 0 4px 32px #00c6ff44;
+  transform: scale(1.04) translateY(-2px);
+}
+@keyframes contactFadeIn {
+  0% { opacity: 0; transform: translateY(40px) scale(0.95); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+#contact h2.text-white {
+  animation: contactGradientText 2.5s linear infinite alternate;
+  background: linear-gradient(90deg, #6ec1e4 0%, #b3e0ff 50%, #00c6ff 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+}
+@keyframes contactGradientText {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
 
 
